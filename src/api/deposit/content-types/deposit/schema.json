@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "deposits",
+  "info": {
+    "singularName": "deposit",
+    "pluralName": "deposits",
+    "displayName": "Deposit"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "deposit": {
+      "type": "decimal"
+    },
+    "id_deposit": {
+      "type": "uid"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "dataphone",
+        "cash",
+        "spend"
+      ]
+    },
+    "bar": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::bar.bar"
+    },
+    "store": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::store.store"
+    },
+    "ipo": {
+      "type": "decimal"
+    }
+  }
+}

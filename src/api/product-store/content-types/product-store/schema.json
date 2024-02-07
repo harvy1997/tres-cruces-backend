@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_stores",
+  "info": {
+    "singularName": "product-store",
+    "pluralName": "product-stores",
+    "displayName": "Product_Store"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "id_product_store": {
+      "type": "uid"
+    },
+    "event_price": {
+      "type": "decimal"
+    },
+    "public_price": {
+      "type": "decimal"
+    },
+    "bar_price": {
+      "type": "decimal"
+    },
+    "quantity_initial": {
+      "type": "integer"
+    },
+    "quantity": {
+      "type": "integer"
+    },
+    "return": {
+      "type": "integer"
+    },
+    "utility_quantity": {
+      "type": "decimal"
+    },
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product"
+    },
+    "store": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::store.store"
+    }
+  }
+}

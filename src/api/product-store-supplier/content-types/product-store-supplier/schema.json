@@ -1,0 +1,72 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_store_suppliers",
+  "info": {
+    "singularName": "product-store-supplier",
+    "pluralName": "product-store-suppliers",
+    "displayName": "product_store_supplier"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "boxes": {
+      "type": "integer"
+    },
+    "unit_in_boxes": {
+      "type": "integer"
+    },
+    "units": {
+      "type": "integer"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "quantity": {
+      "type": "integer"
+    },
+    "quantity_initial": {
+      "type": "integer"
+    },
+    "base_price": {
+      "type": "integer"
+    },
+    "utility": {
+      "type": "integer"
+    },
+    "ipo": {
+      "type": "biginteger"
+    },
+    "ipo_type": {
+      "type": "enumeration",
+      "enum": [
+        "porcentage",
+        "value"
+      ]
+    },
+    "iva": {
+      "type": "biginteger"
+    },
+    "iva_type": {
+      "type": "enumeration",
+      "enum": [
+        "porcentage",
+        "value"
+      ]
+    },
+    "return": {
+      "type": "decimal"
+    },
+    "product_store": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product-store.product-store"
+    },
+    "supplier": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::supplier.supplier"
+    }
+  }
+}

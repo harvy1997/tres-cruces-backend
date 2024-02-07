@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stores",
+  "info": {
+    "singularName": "store",
+    "pluralName": "stores",
+    "displayName": "Store",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "sell": {
+      "type": "decimal"
+    },
+    "own_expense": {
+      "type": "decimal"
+    },
+    "cash_payment": {
+      "type": "decimal"
+    },
+    "dataphone": {
+      "type": "decimal"
+    },
+    "vouchers": {
+      "type": "decimal"
+    },
+    "suppplier_payment": {
+      "type": "decimal"
+    },
+    "utility": {
+      "type": "decimal"
+    },
+    "event": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::event.event"
+    },
+    "id_store": {
+      "type": "uid"
+    }
+  }
+}

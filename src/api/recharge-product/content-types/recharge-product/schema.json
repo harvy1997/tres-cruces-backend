@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "recharge_products",
+  "info": {
+    "singularName": "recharge-product",
+    "pluralName": "recharge-products",
+    "displayName": "Recharge_Product"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "quantity": {
+      "type": "integer"
+    },
+    "product_store": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product-store.product-store"
+    },
+    "recharge": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::recharge.recharge"
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bars",
+  "info": {
+    "singularName": "bar",
+    "pluralName": "bars",
+    "displayName": "Bar"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "id_bar": {
+      "type": "uid"
+    },
+    "responsable": {
+      "type": "integer"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "activacion",
+        "barra",
+        "maneros",
+        "cockteles",
+        "chaza",
+        "camerino",
+        "otro"
+      ]
+    },
+    "total_sell": {
+      "type": "decimal"
+    },
+    "sell": {
+      "type": "decimal"
+    },
+    "own_expense": {
+      "type": "decimal"
+    },
+    "cash_payment": {
+      "type": "decimal"
+    },
+    "dataphone": {
+      "type": "decimal"
+    },
+    "vouchers": {
+      "type": "decimal"
+    },
+    "event": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::event.event"
+    }
+  }
+}
