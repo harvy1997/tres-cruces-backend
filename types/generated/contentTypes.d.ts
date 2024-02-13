@@ -1131,6 +1131,7 @@ export interface ApiStoreStore extends Schema.CollectionType {
       'api::event.event'
     >;
     id_store: Attribute.UID;
+    name: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

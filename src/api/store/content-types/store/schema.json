@@ -40,6 +40,9 @@
     },
     "id_store": {
       "type": "uid"
+    },
+    "name": {
+      "type": "string"
     }
   }
 }
