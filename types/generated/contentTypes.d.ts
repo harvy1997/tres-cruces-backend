@@ -787,6 +787,7 @@ export interface ApiBarBar extends Schema.CollectionType {
     singularName: 'bar';
     pluralName: 'bars';
     displayName: 'Bar';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -812,6 +813,8 @@ export interface ApiBarBar extends Schema.CollectionType {
     dataphone: Attribute.Decimal;
     vouchers: Attribute.Decimal;
     event: Attribute.Relation<'api::bar.bar', 'oneToOne', 'api::event.event'>;
+    responsable_name: Attribute.String;
+    name: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

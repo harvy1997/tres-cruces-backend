@@ -6,4 +6,10 @@
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::product-store-supplier.product-store-supplier');
+module.exports = createCoreController('api::product-store-supplier.product-store-supplier'
+// ,({strapi})=>({
+//     async update(ctx){
+        
+//     }
+// })
+);

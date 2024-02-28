@@ -4,7 +4,8 @@
   "info": {
     "singularName": "bar",
     "pluralName": "bars",
-    "displayName": "Bar"
+    "displayName": "Bar",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -51,6 +52,12 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::event.event"
+    },
+    "responsable_name": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
     }
   }
 }
