@@ -4,7 +4,8 @@
   "info": {
     "singularName": "product-store-supplier",
     "pluralName": "product-store-suppliers",
-    "displayName": "product_store_supplier"
+    "displayName": "product_store_supplier",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -24,10 +25,12 @@
       "type": "decimal"
     },
     "quantity": {
-      "type": "integer"
+      "type": "integer",
+      "default": 0
     },
     "quantity_initial": {
-      "type": "integer"
+      "type": "integer",
+      "default": 0
     },
     "base_price": {
       "type": "integer"
@@ -67,6 +70,9 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::supplier.supplier"
+    },
+    "priority": {
+      "type": "integer"
     }
   }
 }

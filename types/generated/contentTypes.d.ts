@@ -985,6 +985,7 @@ export interface ApiProductStoreSupplierProductStoreSupplier
     singularName: 'product-store-supplier';
     pluralName: 'product-store-suppliers';
     displayName: 'product_store_supplier';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -994,8 +995,8 @@ export interface ApiProductStoreSupplierProductStoreSupplier
     unit_in_boxes: Attribute.Integer;
     units: Attribute.Integer;
     price: Attribute.Decimal;
-    quantity: Attribute.Integer;
-    quantity_initial: Attribute.Integer;
+    quantity: Attribute.Integer & Attribute.DefaultTo<0>;
+    quantity_initial: Attribute.Integer & Attribute.DefaultTo<0>;
     base_price: Attribute.Integer;
     utility: Attribute.Integer;
     ipo: Attribute.BigInteger;
@@ -1013,6 +1014,7 @@ export interface ApiProductStoreSupplierProductStoreSupplier
       'oneToOne',
       'api::supplier.supplier'
     >;
+    priority: Attribute.Integer;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
