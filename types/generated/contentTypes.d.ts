@@ -997,11 +997,11 @@ export interface ApiProductStoreSupplierProductStoreSupplier
     price: Attribute.Decimal;
     quantity: Attribute.Integer & Attribute.DefaultTo<0>;
     quantity_initial: Attribute.Integer & Attribute.DefaultTo<0>;
-    base_price: Attribute.Integer;
+    base_price: Attribute.Decimal;
     utility: Attribute.Integer;
-    ipo: Attribute.BigInteger;
+    ipo: Attribute.Decimal;
     ipo_type: Attribute.Enumeration<['porcentage', 'value']>;
-    iva: Attribute.BigInteger;
+    iva: Attribute.Decimal;
     iva_type: Attribute.Enumeration<['porcentage', 'value']>;
     return: Attribute.Decimal;
     product_store: Attribute.Relation<
@@ -1015,6 +1015,7 @@ export interface ApiProductStoreSupplierProductStoreSupplier
       'api::supplier.supplier'
     >;
     priority: Attribute.Integer;
+    cost_price: Attribute.Decimal;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1051,6 +1052,11 @@ export interface ApiRechargeRecharge extends Schema.CollectionType {
       'api::recharge.recharge',
       'oneToOne',
       'api::store.store'
+    >;
+    bar: Attribute.Relation<
+      'api::recharge.recharge',
+      'oneToOne',
+      'api::bar.bar'
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;

@@ -33,13 +33,13 @@
       "default": 0
     },
     "base_price": {
-      "type": "integer"
+      "type": "decimal"
     },
     "utility": {
       "type": "integer"
     },
     "ipo": {
-      "type": "biginteger"
+      "type": "decimal"
     },
     "ipo_type": {
       "type": "enumeration",
@@ -49,7 +49,7 @@
       ]
     },
     "iva": {
-      "type": "biginteger"
+      "type": "decimal"
     },
     "iva_type": {
       "type": "enumeration",
@@ -73,6 +73,9 @@
     },
     "priority": {
       "type": "integer"
+    },
+    "cost_price": {
+      "type": "decimal"
     }
   }
 }

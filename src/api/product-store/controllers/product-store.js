@@ -7,7 +7,8 @@
 const { createCoreController } = require('@strapi/strapi').factories;
 
 
-module.exports = createCoreController('api::product-store.product-store',({strapi})=>({
+module.exports = createCoreController('api::product-store.product-store'
+,({strapi})=>({
     async update(ctx){
         const {id}=await ctx.params;
         let productStore=ctx.request.body.data;
@@ -25,4 +26,5 @@ module.exports = createCoreController('api::product-store.product-store',({strap
         const result= await super.update(ctx);
         return result;
     }
-}));
+})
+);
