@@ -66,7 +66,7 @@ module.exports = createCoreController('api::product-store-supplier.product-store
                         await knex("product_stores").transacting(trx).where({id:productStore.id}).update({quantity:productStore.attributes.quantity})
                     }
                     ctx.send({ msg: "todo okey",data:{a:productStoreSupplierList,b:productStoreList} })
-                    await trx.rollback();
+                    await trx.commit();
                 })
             } catch (error) {
                 ctx.send({ msg: "falló",data:productStoreSupplierList })

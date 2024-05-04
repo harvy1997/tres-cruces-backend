@@ -2,7 +2,7 @@ module.exports = {
     routes: [
         {
             method:"POST",
-            path:"/product/recharge",
+            path:"/product-stores/recharge",
             handler:"custom.recharge"
         }
     ]
