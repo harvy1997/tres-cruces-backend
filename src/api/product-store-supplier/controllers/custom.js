@@ -47,7 +47,8 @@ module.exports = createCoreController('api::product-store-supplier.product-store
                     idx++;
                 } while (exd > 0 && idx < limit)
 
-                product_store.attributes.quantity -= quantity;
+                //product_store.attributes.quantity -= quantity;
+                product_store.quantity -= quantity;
                 productStoreList.push(product_store)
                 productStoreSupplierList = productStoreSupplierList.concat(productStoreSuppliers)
                 if (!isCommit) break;
@@ -63,7 +64,8 @@ module.exports = createCoreController('api::product-store-supplier.product-store
                         await knex("product_store_suppliers").transacting(trx).where({id:productStoreSupplier.id}).update({quantity:productStoreSupplier.quantity})
                     }
                     for (const productStore of productStoreList) {
-                        await knex("product_stores").transacting(trx).where({id:productStore.id}).update({quantity:productStore.attributes.quantity})
+                        //await knex("product_stores").transacting(trx).where({id:productStore.id}).update({quantity:productStore.attributes.quantity})
+                        await knex("product_stores").transacting(trx).where({id:productStore.id}).update({quantity:productStore.quantity})
                     }
                     ctx.send({ msg: "todo okey",data:{a:productStoreSupplierList,b:productStoreList} })
                     await trx.commit();
